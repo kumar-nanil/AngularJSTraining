@@ -46,3 +46,84 @@ Creating a Service
 3. Provide
 4. Value
 5. Constant
+
+Creating our own Directives
+HTML + JS
+
+3 things to bear in mind.
+1. Link
+	a. Append and Prepend
+	b. Controller 
+	c. Restrict - EAC
+	d. Template Property
+
+2. Controller
+	Pre-linking phase to scope.
+	Bind the model in the controller.
+
+
+3. DDO : Directive Definition Object.
+
+Below are the symbols for defining directives.
+
+= object
+@ simple string
+& function
+
+Controller and Service are synchronous, we can make it async
+by using PROMISE.
+
+PROMISE
+
+Defered object, is a pending result.
+
+$http -- For making Rest calls. By default returns a promise.
+
+$http.get(url,[config])
+
+
+
+Transformation
+
+Applying transformation on JSON Response 
+
+$http.defaults.transformRequest
+
+
+$httpProvider -- Is for MockServer.
+
+$resource Service 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

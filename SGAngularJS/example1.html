@@ -28,16 +28,44 @@
         <button ng-click="addName()">Add Name</button>
         <button ng-click="removeName()">Remove Name</button>
     </div>
-    
-    <div ng-controller="PlayerCtrl">
-        <span ng-repeat="player in players">
+
+    <div ng-controller="PlayerHttpResolveCtrl">
+        <h2>A-Synchronous through Resolve Promise</h2>
+        <span ng-repeat="player in players" player-animation style="display:inline-block">
             <player-info-card player="player">
             </player-info-card>
         </span>
-    
     </div>
     
+    <div ng-controller="PlayerHttpCtrl">
+        <h2>A-Synchronous through WebServer</h2>
+        <span ng-repeat="player in players" player-animation style="display:inline-block">
+            <player-info-card player="player">
+            </player-info-card>
+        </span>
+    </div>
+    
+    <div ng-controller="AsyncPlayerCtrl">
+        <h2>A-Synchronous</h2>
+        <span ng-repeat="player in players" player-animation style="display:inline-block">
+            <player-info-card player="player">
+            </player-info-card>
+        </span>
+    </div>
+    
+    <div ng-controller="PlayerCtrl">
+        <h2>Synchronous</h2>
+        <span ng-repeat="player in players" player-animation style="display:inline-block">
+            <player-info-card player="player">
+            </player-info-card>
+        </span>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.js"></script>
     <script src="scripts/app.js"></script>
     <script type="text/javascript" src="scripts/controllers/FirstCtrl.js"></script>
     <script type="text/javascript" src="scripts/services/MyDataService.js"></script>
@@ -45,6 +73,13 @@
     <script type="text/javascript" src="scripts/services/PlayerService.js"></script>
     <script type="text/javascript" src="scripts/directives/PlayerInfoCard.js"></script>
     <script type="text/javascript" src="scripts/controllers/PlayerCtrl.js"></script>
+    <script type="text/javascript" src="scripts/directives/PlayerAnimation.js"></script>
+    <script type="text/javascript" src="scripts/controllers/AsyncPlayerCtrl.js"></script>
+    <script type="text/javascript" src="scripts/services/AsyncPlayerService.js"></script>
+    <script type="text/javascript" src="scripts/controllers/PlayerHttpCtrl.js"></script>
+    <script type="text/javascript" src="scripts/services/PlayerHttpService.js"></script>
+    <script type="text/javascript" src="scripts/services/PlayerHttpServiceResolvePromise.js"></script>
+    <script type="text/javascript" src="scripts/controllers/PlayerHttpResolveCtrl.js"></script>
 </body>
 
 </html>

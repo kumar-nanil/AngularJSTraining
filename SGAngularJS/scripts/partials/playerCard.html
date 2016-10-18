@@ -1,6 +1,7 @@
-<div>
+<div class="container">
     <h2>Name : {{player.name}}</h2>
     <h3>Mentor : {{player.mentor}}</h3>
+    <h4>Date Downloaded : {{player.dateDownloaded}}</h4>
     <p>
     Friends : 
         <span ng-if="player.friends">
@@ -10,4 +11,5 @@
         </span>
     
     </p>
+    <button ng-click="clickMe(player)">Player DOB</button>
 </div>

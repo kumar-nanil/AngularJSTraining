@@ -10,6 +10,11 @@ angular.module('MyApp.directives')
                 templateUrl:'scripts/partials/playerCard.html',
                 scope: {
                     player:'='//Equals because it is gone receive an object.
+                },
+                controller:function($scope){
+                    $scope.clickMe=function(player) {
+                        alert(player.birthDate);
+                    }
                 }
             };
          }]);
