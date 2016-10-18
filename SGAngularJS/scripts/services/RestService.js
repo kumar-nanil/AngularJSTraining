@@ -1,8 +1,8 @@
 angular.module('MyApp.services')
-    .service('RestService',['$resource'
+    .service('RestService',['$resource',
         function ($resource) {
             'use strict';
-            return $resource('http://jsonplaceholder.typicode.com/:resource_id', {
+            return $resource('http://jsonplaceholder.typicode.com/posts/:resource_id', {
                 resource_id: '@resource_id'
                 
             }, {
