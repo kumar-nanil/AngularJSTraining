@@ -1,0 +1,48 @@
+AngularJS -1.5
+
+MEAN stack
+
+Other popular frameworks equal to AngularJS
+Knockout
+Emberjs
+Sencha EXTJS
+
+FLUX and React JS
+
+ReactJS/PolymerJS can b used with Angular JS
+
+$rootscope is root.
+For every controller a $scope is created. THis is bound to the $rootscope.
+
+
+Important !
+$complie
+$digest
+$apply
+
+$digest cycle
+
+
+
+$apply cycle
+
+
+Install Brackets and Plugins
+1. Angular Snippets Collection
+2. AngularJS Code Hints
+3. AngularJS for Brackets
+4. NodeJS integration
+5. NewJect Generator
+
+Java Script
+
+use strict mode
+
+Creating a Service
+5 Options or ways
+
+1. Factory
+2. Service
+3. Provide
+4. Value
+5. Constant
