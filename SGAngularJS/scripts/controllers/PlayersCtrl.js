@@ -1,24 +1,27 @@
 //angular.module('MyApp.controllers')
-//    .controller('PlayersCtrl',['$scope', 'Player',
+//	.controller('PlayersCtrl', ['$scope', 'Player',
 //        function ($scope, Player) {
-//            'use strict';
-//            Player.query().$promise.then(function(PlayerResponse) {
-//                $scope.players = PlayerResponse}).catch(function(reason) {
-//                alert("Reason " + reason)
-//            });
-//         }]);
-
-//angular.module('MyApp.controllers')
-//    .controller('PlayersCtrl',['$scope', 'players',
-//        function ($scope, players) {
-//            'use strict';
-//            $scope.players=players;
-//            
-//            
+//			'use strict';
+//			//$scope.players = PlayerRestService.query();
+//
+//			Player.query().$promise.then(function (PlayerResponse) {
+//				$scope.players = PlayerResponse
+//			}).catch(function (reason) {
+//				alert("Reason " + reason)
+//			});
+//			$scope.deletePlayer = function (player) {
+//				console.log(player)
+//					//var player = this.row.entity;
+//
+//				player.$delete(function () {
+//					$window.location.href = '';
+//				})
+//			}
+//
 //         }]);
 
 angular.module('MyApp.controllers')
-	.controller('PlayersCtrl', ['$scope','$window', 'players',
+	.controller('PlayersCtrl', ['$scope', '$window', 'players',
         function ($scope, $window, players) {
 
 
@@ -37,25 +40,27 @@ angular.module('MyApp.controllers')
 				},
 					{
 						displayName: 'Actions',
-//						cellTemplate: '<td>' +
-//							'<a class="btn btn-primary" ui-sref="playerDetails({id:player._id})">View</a>' +
-//							'</td>' +
-//
-//							'<td>' +
-//							'<a class="btn btn-danger" ng-click="deletePlayer(player)">Delete</a>' +
-//							'</td>'
-                        cellTemplate: '<div class="grid-action-cell">'+
-                        '<a ng-click="$event.stopPropogation();'+
-                        'deletePlayer(row.entity);" href="#">Delete</a></div>'
-					}
-							]
+						cellTemplate: '<div class="grid-action-cell">' +
+							'<a class="btn btn-primary"' +
+							'ui-sref="playerDetails({id:row.getProperty(\'_id\')})' +
+							'">View</a>' +
+							'<a ng-click="$event.stopPropagation();deletePlayer(row.entity);' +
+							'"href="#""' +
+							'">Delete</a></div>'
+				}
+				]
 			};
-            $scope.deletePlayer= function(player) {
-                console.log(player);
-                player.$delete(function(){
-                    $window.location.href='';
-                })
-            }
+
+			$scope.deletePlayer = function (player) {
+
+				console.log(player)
+					//var player = this.row.entity;
+
+				player.$delete(function () {
+					$window.location.href = '';
+				})
+
+			}
 
 
 
@@ -64,4 +69,21 @@ angular.module('MyApp.controllers')
 
 
 
-         }]);
+	}]);
+
+//angular.module('MyApp.controllers')
+//	.controller('PlayersCtrl', ['$scope', '$window', 'Player',
+//        function ($scope, $window, Player) {
+//			'use strict';
+//
+//
+//			Player.query().$promise.then(function (PlayerResponse) {
+//				$scope.players = PlayerResponse
+//			});
+//
+//			$scope.deletePlayer = function (player) {
+//				player.$delete(function () {
+//					$window.location.href = '';
+//				})
+//			}
+//         }]);
