@@ -56,6 +56,7 @@ HTML + JS
 	b. Controller 
 	c. Restrict - EAC
 	d. Template Property
+DOM Manupilations
 
 2. Controller
 	Pre-linking phase to scope.
@@ -94,6 +95,35 @@ $httpProvider -- Is for MockServer.
 
 $resource Service 
 
+
+
+Day 3 --
+
+Routing
+
+Characteristics of SPA
+1. All assets, HTML, CSS and JS are pushed to client
+2. 
+
+Routing Frameworks
+
+ngRoute	- Older
+Based on URL Fragment
+Each Route has URL fragment identifier, View template and Optional Controller
+
+
+UI Router - 3rd Party and new
+Based on Application state
+Each Route has Optional URL fragment identifier, View template and Optional Controller
+and additional attached behavior.
+
+What is a Route State ?
+
+
+State Provider Service is used to do the routing in UI-Router
+
+$stateProvider.state("productList", {
+}
 
 
 
