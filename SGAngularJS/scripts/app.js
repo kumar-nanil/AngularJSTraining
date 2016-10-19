@@ -13,13 +13,13 @@ angular.module('MyApp', [
 		$stateProvider.state('players', {
 			url: '/players',
 			templateUrl: 'scripts/partials/players.html',
-			controller: 'PlayersCtrl',
-            resolve: {
-                Player: "Player",
-                players: function (Player) {
-                    return Player.query().$promise;
-                }
-            }
+			controller: 'PlayersCtrl'
+//            resolve: {
+//                Player: "Player",
+//                players: function (Player) {
+//                    return Player.query().$promise;
+//                }
+//            }
 		}).state('playerDetails', {
 			url: '/players/:id/view',
 			templateUrl: 'scripts/partials/player-details.html',

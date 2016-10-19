@@ -1,0 +1,24 @@
+{
+  "name": "angularjstest",
+  "version": "1.0.0",
+  "description": "Test Case",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "jasmine": "^2.5.2",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "mongoose": "^4.6.4"
+  },
+  "devDependencies": {
+    "karma-jasmine": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

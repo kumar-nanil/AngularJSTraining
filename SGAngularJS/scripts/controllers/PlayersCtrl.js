@@ -21,13 +21,16 @@
 //         }]);
 
 angular.module('MyApp.controllers')
-	.controller('PlayersCtrl', ['$scope', '$window', 'players',
-        function ($scope, $window, players) {
+	.controller('PlayersCtrl', ['$scope', '$window', 'Player',
+        function ($scope, $window, Player) {
 
 
 			'use strict';
+            Player.query().$promise.then(function (PlayerResponse) {
+				$scope.players = PlayerResponse
+			})
 
-			$scope.players = players;
+//			$scope.players = Player;
 			$scope.gridOptions = {
 				data: 'players',
 				columnDefs: [{
