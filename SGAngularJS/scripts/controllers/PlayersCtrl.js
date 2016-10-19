@@ -8,9 +8,60 @@
 //            });
 //         }]);
 
+//angular.module('MyApp.controllers')
+//    .controller('PlayersCtrl',['$scope', 'players',
+//        function ($scope, players) {
+//            'use strict';
+//            $scope.players=players;
+//            
+//            
+//         }]);
+
 angular.module('MyApp.controllers')
-    .controller('PlayersCtrl',['$scope', 'players',
-        function ($scope, players) {
-            'use strict';
-            $scope.players=players;    
+	.controller('PlayersCtrl', ['$scope','$window', 'players',
+        function ($scope, $window, players) {
+
+
+			'use strict';
+
+			$scope.players = players;
+			$scope.gridOptions = {
+				data: 'players',
+				columnDefs: [{
+						field: 'name',
+						displayName: 'Name'
+				},
+					{
+						field: 'debutYear',
+						displayName: 'Debut Year'
+				},
+					{
+						displayName: 'Actions',
+//						cellTemplate: '<td>' +
+//							'<a class="btn btn-primary" ui-sref="playerDetails({id:player._id})">View</a>' +
+//							'</td>' +
+//
+//							'<td>' +
+//							'<a class="btn btn-danger" ng-click="deletePlayer(player)">Delete</a>' +
+//							'</td>'
+                        cellTemplate: '<div class="grid-action-cell">'+
+                        '<a ng-click="$event.stopPropogation();'+
+                        'deletePlayer(row.entity);" href="#">Delete</a></div>'
+					}
+							]
+			};
+            $scope.deletePlayer= function(player) {
+                console.log(player);
+                player.$delete(function(){
+                    $window.location.href='';
+                })
+            }
+
+
+
+
+			//$scope.players = players;
+
+
+
          }]);

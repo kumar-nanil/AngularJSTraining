@@ -126,7 +126,12 @@ $stateProvider.state("productList", {
 }
 
 
+App.js - Configure the router
+	& Initialize the state router.
 
+Player REstService.js -> $Resource in initialized to simplify the REST calls
+
+Controller and Partials have to be designed
 
 
 

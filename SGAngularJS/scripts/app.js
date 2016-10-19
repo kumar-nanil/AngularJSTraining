@@ -4,7 +4,8 @@ angular.module('MyApp', [
     'MyApp.providers',
     'MyApp.services',
     'MyApp.filters',
-	'ui.router'
+	'ui.router',
+    'ngGrid'
 ]).config(
 	function ($stateProvider, $httpProvider) {
 		'use strict';
